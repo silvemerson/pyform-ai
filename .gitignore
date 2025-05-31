@@ -1,0 +1,6 @@
+__pycache__/
+.env
+*.tfstate
+*.tfplan
+generated/
+.venv
