@@ -1,0 +1,4 @@
+# requirements.txt
+openai>=0.28.1      # cliente OpenAI (compatível com ChatCompletion)
+requests>=2.31.0    # usado para conversar com o Ollama local
+python-dotenv>=1.0  # opcional: carregar variáveis do .env
