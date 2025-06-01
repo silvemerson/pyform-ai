@@ -14,9 +14,17 @@ def run_cli():
     with open(args.output, "w") as f:
         f.write(result)
     
-    print(f"Terraform gerado em: {args.output}")
+    print(f"Terraform gerado em: {args.output}\n")
     
+    with open(args.output, "r") as f:
+        content = f.read()
+        print("Conteúdo do arquivo gerado:\n")
+        print(content)
+
 def validate_tf(path: str):
     print("Validando com Terraform...")
     subprocess.run(["terraform", "fmt", path])
     subprocess.run(["terraform", "validate"])
+
+if __name__ == "__main__":
+    run_cli()
