@@ -3,6 +3,8 @@ import requests
 import openai
 
 USE_OLLAMA = True  # Mude para False se quiser usar OpenAI
+OLLAMA_URL   = os.getenv("OLLAMA_URL")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL")
 
 def generate_terraform(prompt: str) -> str:
     base_prompt = f"""
@@ -15,8 +17,8 @@ Retorne apenas o código entre ```, sem explicações.
 
     if USE_OLLAMA:
         response = requests.post(
-            "http://192.168.1.100:11434/api/generate",
-            json={"model": "codellama", "prompt": base_prompt, "stream": False}
+            f"{OLLAMA_URL}/api/generate",
+            json={"model": OLLAMA_MODEL, "prompt": base_prompt, "stream": False}
         )
         return response.json()["response"]
 
@@ -28,4 +30,3 @@ Retorne apenas o código entre ```, sem explicações.
             temperature=0.2
         )
         return response.choices[0].message["content"]
-1
