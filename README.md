@@ -1,6 +1,6 @@
 # Assistente IA do Terraform com Python
 
-![banner](img/banner.png)
+![banner](img/banner-novo.png)
 
 ```bash
 
