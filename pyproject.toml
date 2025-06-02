@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "terraform-ai-py"
+name = "pyform-ai"
 version = "0.1.1"
 description = "AI-enhanced CLI tool for Terraform insights"
 authors = [{ name = "Emerson Silva", email = "araujo.emerson28@gmail.com" }]
@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.scripts]
-terraform-ai = "terraform_ai_py.cli:run_cli"
+pyform-ai = "pyform-ai.cli:run_cli"
 
 [tool.setuptools]
-packages = ["terraform_ai_py"] 
+packages = ["pyform-ai"] 
