@@ -54,6 +54,23 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 ```
+### Na prática
+
+```bash
+python3 main.py "crie um S3 com versionamento"
+
+Terraform gerado em: generated/main.tf
+
+Conteúdo do arquivo gerado:
+
+resource "aws_s3_bucket" "example" {
+  bucket = "example-bucket"
+  versioning {
+    enabled = true
+  }
+}
+```
+
 
 ## Ideias futuras (em construção)
 
