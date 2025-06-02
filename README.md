@@ -57,6 +57,11 @@ pip install -r requirements.txt
 ### Na prática
 
 ```bash
+export OLLAMA_URL="http://192.168.1.100:11434"
+export OLLAMA_MODEL="codellama"
+```
+
+```bash
 python3 main.py "crie um S3 com versionamento"
 
 Terraform gerado em: generated/main.tf
@@ -70,8 +75,6 @@ resource "aws_s3_bucket" "example" {
   }
 }
 ```
-
-
 ## Ideias futuras (em construção)
 
 Em breve, o projeto incluirá suporte à API da OpenAI (GPT-4, GPT-3.5), permitindo aos usuários escolher entre:
